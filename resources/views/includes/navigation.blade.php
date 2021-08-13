@@ -1,7 +1,8 @@
 <nav class="navbar navbar-light fixed-top navbar-expand-lg">
     <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}"><img src="{{ asset('img/Logo.png') }}"
-                                                           alt="Bulgarian Library Logo"></a>
+        <a class="navbar-brand" href="{{ url('/') }}">
+            @include('includes.logo')
+        </a>
         <div class="navbar-header">
             <button class="navbar-toggler text-end" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse"
