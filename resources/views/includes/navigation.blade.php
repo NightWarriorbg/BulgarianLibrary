@@ -79,7 +79,7 @@
                     <li class="nav-item dropdown hidden-sm hidden-xs">
                         <a href="#" data-bs-toggle="dropdown">
                             <img src="{{ asset('img/no-avatar.jpg') }}" style="" alt="Avatar"
-                                 class="avatar">{{ Auth::user()->name }} <i
+                                 class="avatar">{{ Auth::user()->username }} <i
                                 class="bi bi-caret-down-fill"
                                 style="font-size: 10px;"></i>
                         </a>

@@ -7,7 +7,6 @@
 <title>{{ config('app.name') }} - @yield('title')</title>
 
 <!-- Styles -->
-
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 <link href="{{ asset('css/auth.css') }}" rel="stylesheet">
@@ -19,4 +18,6 @@
         'csrfToken' => csrf_token(),
     ]); ?>
 </script>
+
+<script src="{{ asset('js/app.js') }}" defer></script>
 
