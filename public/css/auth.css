@@ -1,0 +1,26 @@
+.auth-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.card-auth > .panel-header {
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.card-auth > .auth-content {
+    display: flex;
+    justify-content: center;
+}
+
+.auth-input {
+    min-width: 20rem !important;
+}
+
+@media only screen and (max-width: 995px) {
+    footer {
+        position: static !important;
+    }
+}
