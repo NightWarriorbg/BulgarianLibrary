@@ -36,9 +36,24 @@
                                name="password" placeholder="Парола ..."
                                required>
                     </div>
+
+                    <div class="mb-2">
+                        <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                        <label class="form-check-label" for="remember">
+                            {{ __('Remember Me') }}
+                        </label>
+                    </div>
+
                     <div class="mb-2">
                         <input type="submit" class="form-control" class="btn btn-default" value="Вход">
+
+                        @if (Route::has('password.request'))
+                            <a class="btn btn-link" href="{{ route('password.request') }}">
+                                {{ __('Forgot Your Password?') }}
+                            </a>
+                        @endif
                     </div>
+
                 </form>
 
             </div>
