@@ -9,24 +9,6 @@
 
         <div class="auth-content">
 
-            @error('username')
-            <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-            @enderror
-
-            @error('email')
-            <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-            @enderror
-
-            @error('password')
-            <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-            @enderror
-
             <form class="form-area" method="POST" action="{{ route('register') }}">
                 @csrf
 
@@ -48,6 +30,24 @@
                 </div>
                 <div class="mb-2">
                     <input type="submit" class="form-control" class="btn btn-default" value="Регистрация">
+                </div>
+
+                <div>
+                    @error('username')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+                </div>
+
+                <div>
+                    @error('email')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+                </div>
+
+                <div>
+                    @error('password')
+                    <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
                 </div>
             </form>
 

@@ -21,7 +21,7 @@ class CreateNewUser implements CreatesNewUsers
     public function create(array $input)
     {
         $validator = Validator::make($input, [
-            'username' => ['required', 'string', 'min:6', 'max:255'],
+            'username' => ['required', 'string', 'min:6', 'max:30'],
             'email' => [
                 'required',
                 'string',
@@ -32,10 +32,7 @@ class CreateNewUser implements CreatesNewUsers
             'password' => $this->passwordRules(),
         ]);
 
-        if ($validator->fails())
-        {
-            return redirect()->back()->withErrors($validator->errors());
-        }
+
 
         $validator->validate();
 
